@@ -14,4 +14,10 @@ contract Todo {
     function createMyTodo(string memory _title, string memory _desc) public {
         todos.push(MyTodo(_title, _desc, false));
     }
+
+    //This function checks what the value of isDone for that
+    //particular index of the array
+    function togggle(uint _index) public {
+        todos[_index].isDone = !todos[_index].isDone;
+    }
 }
