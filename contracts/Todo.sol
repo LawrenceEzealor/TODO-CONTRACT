@@ -9,4 +9,9 @@ contract Todo {
     }
 
     MyTodo[] public todos;
+
+    //This function allows me push in my todos into my array of todos
+    function createMyTodo(string memory _title, string memory _desc) public {
+        todos.push(MyTodo(_title, _desc, false));
+    }
 }
