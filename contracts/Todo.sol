@@ -2,8 +2,11 @@
 pragma solidity ^0.8.2;
 
 contract Todo {
-    Struct MyTodo{
-        string text;
+    struct MyTodo {
+        string title;
+        string description;
         bool isDone;
     }
+
+    MyTodo[] public todos;
 }
