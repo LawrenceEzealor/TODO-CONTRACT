@@ -20,4 +20,9 @@ contract Todo {
     function togggle(uint _index) public {
         todos[_index].isDone = !todos[_index].isDone;
     }
+
+    //This function deletes a todo from the list of the array
+    function deleteTodo(uint _index) public {
+        delete todos[_index];
+    }
 }
