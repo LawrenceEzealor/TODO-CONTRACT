@@ -15,6 +15,15 @@ contract Todo {
         todos.push(MyTodo(_title, _desc, false));
     }
 
+    //This function updates MyTodo
+    function updateMyTodo(
+        string memory _title,
+        string memory _desc,
+        uint8 _index
+    ) public {
+        todos[_index] = MyTodo(_title, _desc, false);
+    }
+
     //This function checks what the value of isDone for that
     //particular index of the array
     function togggle(uint _index) public {
